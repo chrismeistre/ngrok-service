@@ -1,0 +1,16 @@
+[Unit]
+Description=ngrok service
+After=network.target
+
+[Service]
+IgnoreSIGPIPE=true
+ExecStart=/usr/local/bin/ngrok start --all --config /home/kali/.ngrok2/ngrok.yml
+ExecReload=/bin/kill -HUP $MAINPID
+Type=simple
+Restart=always
+RestartSec=3
+
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
