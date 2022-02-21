@@ -12,7 +12,7 @@ sed -i "s/<token_here>/$1/g" /opt/ngrok/ngrok.yml
 
 cd /opt/ngrok
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.tgz
-unzip ngrok-stable-linux-arm.tgz
+tar zxvf ngrok-stable-linux-arm.tgz
 chmod +x ngrok
 
 systemctl enable ngrok.service
