@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 IgnoreSIGPIPE=true
-ExecStart=/usr/local/bin/ngrok start --all --config /home/kali/.ngrok2/ngrok.yml
+ExecStart=/usr/local/bin/ngrok start --all --config /opt/ngrok/ngrok.yml
 ExecReload=/bin/kill -HUP $MAINPID
 Type=simple
 Restart=always
